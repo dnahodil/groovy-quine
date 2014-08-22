@@ -10,6 +10,7 @@ function exec {
 for i in `seq 1 ${1:-1}`;
 do
 	exec
+	printf "."
 done
 
 cat $QUINE
