@@ -6,11 +6,11 @@ if [ -f "$1" ]
 then
     echo "Checking $1..."
 
-    [ "$(groovy $1 | diff $1 -)" ] && echo "$1 is not a valid quine (see output)" || echo "$1 is a valid quine!"
+    [ "$(groovy $@ | diff $1 -)" ] && echo "$1 is not a valid quine (see output)" || echo "$1 is a valid quine!"
 
     echo "=========================================================="
 
-    groovy $1 | diff $1 - --side-by-side # For display
+    groovy "$@" | diff $1 - --side-by-side # For display
 
     echo "=========================================================="
 else
