@@ -33,9 +33,10 @@ retainAll bcstl;};bcs<<w;def ds=[];bcs.toArray().eachWithIndex{cidx,tidx->if(
 tidx){def tdls=[];f.eachLine{l->tdls<<l[(bcs[tidx-1]+1)..(cidx-1)];};ds<<tdls.
 join(nl)}};ds.collect{tgts.indexOf(new BI('1'+it.replace(nl,'').tr(ic,bc),2).
 toString(16).padLeft(hs,'0')+'')}};def p=this.&print;def pln=this.&println;
-def m={pln d2f(a&&a[0]?pi(a[0],b):pi(f2d(_).join(''),b)+1);};def hl=7;
-def sl=(hl+1)..29;def el=-4..-1;def q=39as char;def s=92as char;def dq=34as char;
-def d=36as char;def src='''\
+def d2n={def s=0;it.reverse().eachWithIndex{d,idx->s+=d*(b**idx)};++s};def m={
+pln d2f(a&&a[0]?pi(a[0],b):d2n(f2d(_)))};def hl=7;def sl=(hl+1)..30;
+def el=-4..-1;def q=39as char;def s=92as char;def dq=34as char;def d=36as char;
+def src='''\
 /* A counting Quine, written in Groovy by David Nahodil           */
 /* Supports counting in Binary, Octal, Decimal and Hexadecimal    */
 /*                                                                */
@@ -64,13 +65,14 @@ retainAll bcstl;};bcs<<w;def ds=[];bcs.toArray().eachWithIndex{cidx,tidx->if(
 tidx){def tdls=[];f.eachLine{l->tdls<<l[(bcs[tidx-1]+1)..(cidx-1)];};ds<<tdls.
 join(nl)}};ds.collect{tgts.indexOf(new BI('1'+it.replace(nl,'').tr(ic,bc),2).
 toString(16).padLeft(hs,'0')+'')}};def p=this.&print;def pln=this.&println;
-def m={pln d2f(a&&a[0]?pi(a[0],b):pi(f2d(_).join(''),b)+1);};def hl=7;
-def sl=(hl+1)..29;def el=-4..-1;def q=39as char;def s=92as char;def dq=34as char;
+def d2n={def s=0;it.reverse().eachWithIndex{d,idx->s+=d*(b**idx)};++s};def m={
+pln d2f(a&&a[0]?pi(a[0],b):d2n(f2d(_)))};def hl=7;def sl=(hl+1)..30;
+def el=-4..-1;def q=39as char;def s=92as char;def dq=34as char;def d=36as char;
 def ls=src.readLines();hl.times{pln ls[it]};p ls[hl];pln s;m();ls[sl].each{
-pln it};pln "def d=36as char;def src=$q$q$q$s";p src;
+pln it};pln "def src=$q$q$q$s";p src;
 pln "$q$q${q}.replaceAll(/$dq[bodh]$dq/,$dq$s$dq${d}bs$s$dq$dq)";ls[el].
 each{pln it};'''.replaceAll(/"[bodh]"/,"\"$bs\"")
 def ls=src.readLines();hl.times{pln ls[it]};p ls[hl];pln s;m();ls[sl].each{
-pln it};pln "def d=36as char;def src=$q$q$q$s";p src;
+pln it};pln "def src=$q$q$q$s";p src;
 pln "$q$q${q}.replaceAll(/$dq[bodh]$dq/,$dq$s$dq${d}bs$s$dq$dq)";ls[el].
 each{pln it};
