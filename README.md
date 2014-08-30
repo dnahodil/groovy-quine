@@ -18,18 +18,18 @@ To accurately test quine-3.groovy (the counting quine) you need to pass argument
 
 To test it as it comes from the repo you can use the script like this: `> ./test-quine.sh quine-3.groovy 0`
 
-If, by using the run_counting_quine.sh and reset_counting_quine.sh scripts, you had the quine at 240 counting in octal then you could test it with this command: `> ./test-quine.sh quine-3.groovy 240 o`.
+If, by using the run-counting-quine.sh and reset-counting-quine.sh scripts, you had the quine at 240 counting in octal then you could test it with this command: `> ./test-quine.sh quine-3.groovy 240 o`.
 
-### run_counting_quine.sh
+### run-counting-quine.sh
 Used to run my counting quine (quine-3.groovy) one or more times. Example usage:
 
-Run the quine once: `> ./run_counting_quine.sh`
+Run the quine once: `> ./run-counting-quine.sh`
 
-Run the quine 100 times: `> ./run_counting_quine.sh 100`
+Run the quine 100 times: `> ./run-counting-quine.sh 100`
 
-### reset_counting_quine.sh
+### reset-counting-quine.sh
 Used to reset the counting quine and to optionally change the base of the numbering system. Example usage:
 
-Reset back to 0 in the current numbering system: `> ./reset_counting_quine.sh`
+Reset back to 0 in the current numbering system: `> ./reset-counting-quine.sh`
 
-Reset back to 0 and change to binary counting:  `> ./reset_counting_quine.sh b`
+Reset back to 0 and change to binary counting:  `> ./reset-counting-quine.sh b`
