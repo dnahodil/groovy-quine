@@ -1,5 +1,8 @@
 groovy-quine
 ============
+***Currently broken?***
+*I checked this the other day and it didn't run. I haven't investigated yet but it might be a change in Groovy since the version it was written in (probably around 2.0.x, IIRC).*
+
 A repository for my playing with writing [quines](http://en.wikipedia.org/wiki/Quine_(computing)) in Groovy.
 
 It includes some quines which I wrote and some shell scripts for testing quines and using my counting quine.
